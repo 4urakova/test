@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "0.1.0",
+  "description": "Тестовое задание",
+  "author": "Наталья Чуракова",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:4urakova/test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/4urakova/test.git/issues"
+  },
+  "homepage": "https://github.com/4urakova/test.git"
+}
