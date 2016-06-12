@@ -222,35 +222,41 @@
     </svg>
 
     <section class="notification">
-      <div class="notification__wrapper">
-        <div class="logo">
-          <a href="http://centrallo-app.com">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/icon-logo-tablet.svg" type="image/svg+xml">           
-              <source media="(max-width: 767px)" srcset="img/icon-logo-mobile.svg" type="image/svg+xml">
-              <img src="img/icon-logo-mobile.svg" width="34" height="34" alt="logo">
-            </picture>
-          </a>
-        </div>
+      <div class="notification__wrapper  clearfix">
         <div class="notification__promo">
-          <h4>Centrallo</h4>
-          <span class="notification__promo-text  notification__promo-text--android">Free on the Google Play</span>
-          <span class="notification__promo-text  notification__promo-text--apple">Download it for free on the App Store</span>
+          <div class="logo">
+            <a href="http://centrallo-app.com">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/icon-logo-tablet.svg" type="image/svg+xml">           
+                <source media="(max-width: 767px)" srcset="img/icon-logo-mobile.svg" type="image/svg+xml">
+                <img src="img/icon-logo-mobile.svg" width="34" height="34" alt="logo">
+              </picture>
+            </a>
+          </div>
+          
+          <div class="notification__title">
+            <h4>Centrallo</h4>
+            <span class="notification__promo-text  notification__promo-text--android">Free on the Google Play</span>
+            <span class="notification__promo-text  notification__promo-text--apple">Download it for free on the App Store</span>
+          </div>
         </div>
-        <div class="notification__button">
-          <a class="btn  btn--download  btn--download-android" href="http://play.google.com">Download</a>
-          <a class="btn  btn--download  btn--download-apple" href="http://appstore.com">Download</a>
-        </div>
-        <div class="notification__close">
-          <svg>
-            
-          </svg>
-        </div>
+
+        <div class="notification-download">
+          <div class="notification__button">
+            <a class="btn  btn--download  btn--download-android" href="http://play.google.com">Download</a>
+            <a class="btn  btn--download  btn--download-apple" href="http://appstore.com">Download</a>
+          </div>
+          <div class="notification__close">
+            <svg width="13" height="13">
+              <use xlink:href="#icon-cross"></use>
+            </svg>
+          </div>
+        </div>       
       </div>
     </section>
 
     <header class="main-header">
-      <div class="main-header__wrapper">
+      <div class="main-header__wrapper  clearfix">
         <div class="main-logo">
           <a href="http://centrallo.com">
             <picture>
@@ -263,14 +269,10 @@
         </div>
 
         <div class="user-block">
-          <div class="user-block__promo">
             <a href="" class="user-block__item  user-block__item--active">Sign up<span>for free</span></a>
             <span>- Start publishing in minutes</span>
-          </div>
           
-          <div class="user-block__item">
-            <a href="">Log In</a>
-          </div>         
+            <a href="" class="user-block__item">Log In</a>      
         </div>
       </div>
     </header>
@@ -280,7 +282,7 @@
       <div class="user-page__wrapper">
 
         <section class="user-info">
-          <div class="user-info__user">
+          <div class="user-info__user  clearfix">
             <div class="user-info__photo">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/user-tablet-desktop.png 1x, img/user-tablet-desktop@2x.png 2x">
@@ -320,24 +322,24 @@
 
           <h2>Post-release checklist 2015.02.26</h2>
 
-          <div class="user-page__buttons">
+          <div class="user-page__buttons  clearfix">
             <a class="btn  btn--add" href="">Add to my Centrallo</a>
             <a class="btn  btn--share" href="">Share</a>
           </div>
         </section>
 
-        <article class="post">
+        <article class="post  post--priority">
           <ul class="checklist">
             <li class="checklist__item">
               <input type="checkbox" id="checklist-item-1">
               <label for="checklist-item-1" class="checklist__text">Referral Accepted and Invited invitations not sorbed by A-Z</label>
             </li>
             <li class="checklist__item">
-              <input type="checkbox" id="checklist-item-2">
+              <input type="checkbox" id="checklist-item-2" checked>
               <label for="checklist-item-1" class="checklist__text">Inbox shows me 242 items - that incluses Done items; Only show me active</label>
             </li>
             <li class="checklist__item">
-              <input type="checkbox" id="checklist-item-3">
+              <input type="checkbox" id="checklist-item-3" checked>
               <label for="checklist-item-1" class="checklist__text">Inbox defaults to show done items - it should not</label>
             </li>
             <li class="checklist__item">
@@ -350,60 +352,55 @@
             </li>            
           </ul>
 
-          <section class="post__info">
+          <section class="post__info  clearfix">
             <div class="post__time">2h ago</div>
             <div class="post__buttons">
               <a class="icon  icon--share" href="#">
-                <svg>
+                <svg width="17" height="17">
                   <use xlink:href="#icon-share"></use>
                 </svg>
               </a>
-              <a class="icon  icon--chain" href="#">
-                <svg>
-                  <use xlink:href="#icon-chain"></use>
-                </svg>
-              </a>
+              <a class="icon  icon--chain" href="#"></a>
             </div>
           </section>
         </article>
 
         <article class="post">
           <ul class="list">
-            <li class="list__item">
+            <li class="list__item  list__item--important  clearfix">
               <div class="list__item-title">Children</div>
               <div class="list__item-info">
                 <div class="list__item-time">7h ago</div>
                 <div class="list__item-qty">12 items</div>
               </div>
             </li>
-            <li class="list__item">
+
+            <hr>
+
+            <li class="list__item  clearfix">
               <div class="list__item-title">The longest title in the world</div>
               <div class="list__item-info">
-                <div class="list__item-time">7h ago</div>
-                <div class="list__item-qty">12 items</div>
+                <div class="list__item-time">Mar 13</div>
+                <div class="list__item-qty">3 items</div>
               </div>
             </li>
           </ul>
 
-          <section class="post__info">
+          <section class="post__info  clearfix">
             <div class="post__time">2h ago</div>
             <div class="post__buttons">
               <a class="icon  icon--share" href="#">
-                <svg>
+                <svg width="17" height="17">
                   <use xlink:href="#icon-share"></use>
                 </svg>
               </a>
-              <a class="icon  icon--chain" href="#">
-                <svg>
-                  <use xlink:href="#icon-chain"></use>
-                </svg>
-              </a>
+              <a class="icon  icon--chain" href="#"></a>
             </div>
           </section>
         </article>
 
         <article class="post">
-          <section class="gallery">
+          <section class="gallery  clearfix">
             <div class="gallery__item  gallery__item-video">
               <a href="#video">
                 <picture>
@@ -432,25 +429,19 @@
             </div>
           </section>
 
-          <hr>
-
           <section class="post__note">
             Due on Feb 13, 12:42 PM
           </section>
 
-          <section class="post__info">
+          <section class="post__info  clearfix">
             <div class="post__time">2h ago</div>
             <div class="post__buttons">
               <a class="icon  icon--share" href="#">
-                <svg>
+                <svg width="17" height="17">
                   <use xlink:href="#icon-share"></use>
                 </svg>
               </a>
-              <a class="icon  icon--chain" href="#">
-                <svg>
-                  <use xlink:href="#icon-chain"></use>
-                </svg>
-              </a>
+              <a class="icon  icon--chain" href="#"></a>
             </div>
           </section>
         </article>
@@ -460,7 +451,7 @@
             The Dark Knight Rises is a 2012 British-American superhero film directed be Christopher Nolan,  who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goeyer. Featuring the DC Comics character Batman, the film triology, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
           </section>
 
-          <section class="gallery">
+          <section class="gallery  clearfix">
             <div class="gallery__item">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
@@ -474,7 +465,7 @@
                 <source media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x">
                 <source media="(max-width: 767px)" srcset="img/photo-4-mobile.jpg 1x, img/photo-4-mobile@2x.jpg 2x">
-                <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile.jpg 1x, img/photo-4-mobile@2x.jpg 2x" width="90" height="140" alt="photo-4">
+                <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile.jpg 1x, img/photo-4-mobile@2x.jpg 2x" width="78" height="120" alt="photo-4">
               </picture>
             </div>
             <div class="gallery__item">
@@ -482,7 +473,7 @@
                 <source media="(min-width: 1200px)" srcset="img/photo-5-desktop.jpg 1x, img/photo-5-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-5-tablet.jpg 1x, img/photo-5-tablet@2x.jpg 2x">
                 <source media="(max-width: 767px)" srcset="img/photo-5-mobile.jpg 1x, img/photo-5-mobile@2x.jpg 2x">
-                <img src="img/photo-5-mobile.jpg" srcset="img/photo-5-mobile.jpg 1x, img/photo-5-mobile@2x.jpg 2x" width="255" height="140" alt="photo-5">
+                <img src="img/photo-5-mobile.jpg" srcset="img/photo-5-mobile.jpg 1x, img/photo-5-mobile@2x.jpg 2x" width="264" height="145" alt="photo-5">
               </picture>
             </div>
             <div class="gallery__item">
@@ -490,128 +481,156 @@
                 <source media="(min-width: 1200px)" srcset="img/photo-6-desktop.jpg 1x, img/photo-6-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-6-tablet.jpg 1x, img/photo-6-tablet@2x.jpg 2x">
                 <source media="(max-width: 767px)" srcset="img/photo-6-mobile.jpg 1x, img/photo-6-mobile@2x.jpg 2x">
-                <img src="img/photo-1-mobile.jpg" srcset="img/photo-6-mobile.jpg 1x, img/photo-6-mobile@2x.jpg 2x" width="208" height="140" alt="photo-6">
+                <img src="img/photo-1-mobile.jpg" srcset="img/photo-6-mobile.jpg 1x, img/photo-6-mobile@2x.jpg 2x" width="263" height="178" alt="photo-6">
               </picture>
             </div>
           </section>
 
-          <hr>
-
           <section class="map">
-            <div class="map__area"></div>
+            <div class="map__area">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.317272847965!2d-74.00351028500563!3d40.711031579331944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23876025a5%3A0xb2bb12fd1768f07!2zNDExIFBlYXJsIFN0LCBOZXcgWW9yaywgTlkgMTAwMzgsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1465676187049" width="264" height="177" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
             <div class="map__title">Merry Bergtraum High School for Business Cariers</div>
             <div class="map__address">411 Pearl St, NY 10038 United States of America</div>
-            <a class="map__to-google-maps" href="">Watch locatin on Google Maps</a>
+            <a class="map__to-google-maps" href="">Watch location on Google Maps</a>
           </section>
 
-          <hr>
-
-          <section class="docs">
+          <section class="docs  clearfix">
             <div class="docs__item">
               <a class="docs__file" href="" download>
-                <img src="" width="" height="" alt="">
+                <img src="img/doc-1.svg" width="46" height="58" alt="doc-1">
                 <span>logo_final.eps</span>
               </a>
             </div>
             <div class="docs__item">
               <a class="docs__file" href="" download>
-                <img src="" width="" height="" alt="">
+                <img src="img/doc-2.svg" width="46" height="58" alt="doc-2">
                 <span>photos_summer.zip</span>
               </a>
             </div>
             <div class="docs__item">
               <a class="docs__file" href="" download>
-                <img src="" width="" height="" alt="">
-                <span>work_hard.doc</span>
+                <img src="img/doc-3.svg" width="46" height="58" alt="doc-3">
+                <span>work_...hard.doc</span>
               </a>
             </div>
           </section>
 
-          <section class="post__info">
+          <section class="post__info  clearfix">
             <div class="post__time">2h ago</div>
             <div class="post__buttons">
               <a class="icon  icon--share" href="#">
-                <svg>
+                <svg width="17" height="17">
                   <use xlink:href="#icon-share"></use>
                 </svg>
               </a>
-              <a class="icon  icon--chain" href="#">
-                <svg>
-                  <use xlink:href="#icon-chain"></use>
-                </svg>
-              </a>
+              <a class="icon  icon--chain" href="#"></a>
             </div>
           </section>
         </article>
 
 
         <article class="post  post--invisible">
-          <section class="post__info">
+          <section class="post__info  clearfix">
             <div class="post__time">2h ago</div>
             <div class="post__buttons">
               <a class="icon  icon--share" href="#">
-                <svg>
+                <svg width="17" height="17">
                   <use xlink:href="#icon-share"></use>
                 </svg>
               </a>
-              <a class="icon  icon--chain" href="#">
-                <svg>
-                  <use xlink:href="#icon-chain"></use>
-                </svg>
-              </a>
+              <a class="icon  icon--chain" href="#"></a>
             </div>
           </section>
         </article>
 
         <article class="post  post--invisible">
-          <section class="post__info">
+          <section class="post__info  clearfix">
             <div class="post__time">2h ago</div>
             <div class="post__buttons">
               <a class="icon  icon--share" href="#">
-                <svg>
+                <svg width="17" height="17">
                   <use xlink:href="#icon-share"></use>
                 </svg>
               </a>
-              <a class="icon  icon--chain" href="#">
-                <svg>
-                  <use xlink:href="#icon-chain"></use>
-                </svg>
-              </a>
+              <a class="icon  icon--chain" href="#"></a>
             </div>
           </section>
         </article>
+
+        <article class="popup">
+          <div class="popup__header">
+            <h3>Share</h3>
+            <div class="popup__close">
+              <svg width="20" height="20">
+                <use xlink:href="#icon-cross-dark"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="popup__main">
+            <div class="popup__link">
+              <a href="#">http://cll.io/a6lnu</a>
+            </div>
+            <div class="popup__social">
+              <a class="icon  icon--popup" href="http://facebook.com">
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-fb-big"></use>
+                </svg>
+              </a>
+              <a class="icon  icon--popup" href="http://twitter.com">
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-tw-big"></use>
+                </svg>
+              </a>
+              <a class="icon  icon--popup" href="http://vk.com">
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-vk-big"></use>
+                </svg>
+              </a>
+              <a class="icon  icon--popup" href="http://linkedin.com">
+                <svg width="36" height="36">
+                  <use xlink:href="#icon-in-big"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        
       </div>
     </main>
 
     <footer class="main-footer">
-      <section class="main-footer__copyright">
+      <div class="main-footer__wrapper  clearfix">
+        <section class="main-footer__copyright">
         © Centrallo 2015
-      </section>
-      <nav class="main-footer__nav">
-        <ul>
-          <li class="main-footer__nav-item">
-            <a href="#">Privacy</a>
-          </li>
-          <li class="main-footer__nav-item">
-            <a href="#">Terms</a>
-          </li>
-          <li class="main-footer__nav-item">
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <section class="main-footer__social">
-        <a class="icon  icon--twitter" href="http://twitter.com">
-          <svg>
-            <use xlink:href="#icon-tw-footer"></use>
-          </svg>
-        </a>
-        <a class="icon  icon--facebook" href="http://facebook.com">
-          <svg>
-            <use xlink:href="#icon-fb-footer"></use>
-          </svg>
-        </a>
-      </section>
+        </section>
+        <nav class="main-footer__nav">
+          <ul>
+            <li class="main-footer__nav-item">
+              <a href="#">Privacy</a>
+            </li>
+            <li class="main-footer__nav-item">
+              <a href="#">Terms</a>
+            </li>
+            <li class="main-footer__nav-item">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="main-footer__social">
+          <a class="icon  icon--twitter" href="http://twitter.com">
+            <svg width="17" height="13">
+              <use xlink:href="#icon-tw-footer"></use>
+            </svg>
+          </a>
+          <a class="icon  icon--facebook" href="http://facebook.com">
+            <svg width="9" height="16">
+              <use xlink:href="#icon-fb-footer"></use>
+            </svg>
+          </a>
+        </section>
+      </div>
     </footer>
+
   </body>
 </html>
