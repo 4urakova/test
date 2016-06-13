@@ -5,7 +5,7 @@ var closePopup                = document.querySelector(".popup--opened");
 var crossButton               = document.querySelector(".popup__close");
 var site                      = document.querySelector("body");
 var banner                    = document.querySelector(".notification");
-var closeBanner               = document.querySelector(".notification--closed");
+var closeBanner               = document.querySelector(".hide-banner");
 var crossButtonBanner         = document.querySelector(".notification__close");
 var overlay                   = document.querySelector(".overlay");
 var openOverlay               = document.querySelector(".overlay--visible");
@@ -21,8 +21,8 @@ shareButton.addEventListener("click", function(event) {
 shareIcon.addEventListener("click", function(event) {
   event.preventDefault();
   console.log("Share clicked");
-  overlay.classList.add("overlay--visible");
   openPopup.classList.add("popup--opened");
+  overlay.classList.add("overlay--visible");
 });
 
 crossButton.addEventListener("click", function(event) {
@@ -35,7 +35,7 @@ crossButton.addEventListener("click", function(event) {
 crossButtonBanner.addEventListener("click", function(event) {
   event.preventDefault();
   console.log("Cross clicked");
-  site.classList.add("notification--closed");
+  site.classList.add("hide-banner");
 });
 
 doc.addEventListener("click", function(event) {
