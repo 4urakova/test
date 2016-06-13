@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centrallo</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -221,6 +222,8 @@
       </symbol>
     </svg>
 
+    <div class="overlay"></div>
+
     <section class="notification">
       <div class="notification__wrapper  clearfix">
         <div class="notification__promo">
@@ -261,20 +264,23 @@
           <a href="http://centrallo.com">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-desktop.png 1x, img/logo-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">           
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.png 1x, img/logo-tablet@2x.png 2x">
               <source media="(max-width: 767px)" srcset="img/logo.png 1x, img/logo@2x.png 2x">
               <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="105" height="24" alt="Centrallo">
             </picture>
           </a>
         </div>
 
-        <div class="login">
-            <a href="" class="login__item  login__item--active">Sign up</a>
-
-            <a href="" class="login__item  login__item--full">Sign up for free</a>
+        <div class="login  clearfix">
+          <div class="login__left">
+            <a href="#" class="login__item  login__item--active">Sign up</a>
+            <a href="#" class="login__item  login__item--full">Sign up for free</a>
             <span>&#8212; Start publishing in minutes</span>
-          
-            <a href="" class="login__item">Log In</a>      
+          </div>
+            
+          <div class="login__right">
+            <a href="#" class="login__item">Log In</a>
+          </div>              
         </div>
       </div>
     </header>
@@ -368,6 +374,10 @@
                 </svg>
               </a>
               <a class="icon  icon--chain" href="#"></a>
+              <div class="tooltip">
+                <a class="tooltip__link" href="#">http://cli.io/a6lnu</a>
+                <div class="tooltip__baloon"></div>
+              </div>
             </div>
           </section>
         </article>
@@ -400,6 +410,10 @@
                 </svg>
               </a>
               <a class="icon  icon--chain" href="#"></a>
+              <div class="tooltip">
+                <a class="tooltip__link" href="#">http://cli.io/a6lnu</a>
+                <div class="tooltip__baloon"></div>
+              </div>
             </div>
           </section>
         </article>
@@ -447,6 +461,10 @@
                 </svg>
               </a>
               <a class="icon  icon--chain" href="#"></a>
+              <div class="tooltip">
+                <a class="tooltip__link" href="#">http://cli.io/a6lnu</a>
+                <div class="tooltip__baloon"></div>
+              </div>
             </div>
           </section>
         </article>
@@ -532,6 +550,11 @@
                 </svg>
               </a>
               <a class="icon  icon--chain" href="#"></a>
+              <div class="tooltip">
+                <a class="tooltip__link" href="#">http://cli.io/a6lnu</a>
+                <div class="tooltip__baloon"></div>
+              </div>
+            </div>
             </div>
           </section>
         </article>
@@ -592,6 +615,7 @@
       </div>
     </main>
 
+
     <footer class="main-footer">
       <div class="main-footer__wrapper  clearfix">
         <section class="main-footer__copyright">&#169; Centrallo 2015</section>
@@ -622,6 +646,6 @@
         </section>
       </div>
     </footer>
-
+    <script src="js/scripts.js"></script>
   </body>
 </html>

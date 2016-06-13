@@ -10,5 +10,8 @@
   "bugs": {
     "url": "https://github.com/4urakova/test.git/issues"
   },
-  "homepage": "https://github.com/4urakova/test.git"
+  "homepage": "https://github.com/4urakova/test.git",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
