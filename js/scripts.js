@@ -1,38 +1,43 @@
-var openPopup                 = document.querySelector(".popup");
-var shareButton               = document.querySelector(".btn--share");
-var shareIcon                 = document.querySelector(".icon--share");
-var closePopup                = document.querySelector(".popup--opened");
-var crossButton               = document.querySelector(".popup__close");
-var site                      = document.querySelector("body");
-var banner                    = document.querySelector(".notification");
-var closeBanner               = document.querySelector(".hide-banner");
-var crossButtonBanner         = document.querySelector(".notification__close");
-var overlay                   = document.querySelector(".overlay");
-var openOverlay               = document.querySelector(".overlay--visible");
-var doc                       = document.querySelector(".docs__file");
+var openPopup = document.querySelector(".popup");
+var shareButton = document.querySelector(".btn--share");
+var closePopup = document.querySelector(".popup--opened");
+var crossButton = document.querySelector(".popup__close");
+var site = document.querySelector("body");
+var shareIcon = document.querySelector(".icon--share");
+var banner = document.querySelector(".notification");
+var closeBanner = document.querySelector(".hide-banner");
+var crossButtonBanner = document.querySelector(".notification__close");
+var overlay = document.querySelector(".overlay");
+var openOverlay = document.querySelector(".overlay--visible");
+var doc = document.querySelector(".docs__file");
+var shareIcons = document.querySelectorAll(".icon--share");
+var shareIcon = document.querySelector(".icon--share");
 
-shareButton.addEventListener("click", function(event) {
+[].forEach.call(shareIcons, function(popup) {
+    shareIcons.addEventListener("click", function(event) {
+    event.preventDefault();
+    console.log("Share clicked");
+    overlay.classList.add("overlay--visible");
+    openPopup.classList.add("popup--opened");
+  });
+})
+
+
+shareButton.addEventListener("click",function(event) {
   event.preventDefault();
   console.log("Share clicked");
   overlay.classList.add("overlay--visible");
   openPopup.classList.add("popup--opened");
 });
 
-shareIcon.addEventListener("click", function(event) {
-  event.preventDefault();
-  console.log("Share clicked");
-  openPopup.classList.add("popup--opened");
-  overlay.classList.add("overlay--visible");
-});
-
-crossButton.addEventListener("click", function(event) {
+crossButton.addEventListener("click",function(event) {
   event.preventDefault();
   console.log("Cross clicked");
   overlay.classList.remove("overlay--visible");
   openPopup.classList.remove("popup--opened");
 });
 
-crossButtonBanner.addEventListener("click", function(event) {
+crossButtonBanner.addEventListener("click",function(event) {
   event.preventDefault();
   console.log("Cross clicked");
   site.classList.add("hide-banner");
@@ -41,7 +46,7 @@ crossButtonBanner.addEventListener("click", function(event) {
 doc.addEventListener("click", function(event) {
   event.preventDefault();
   console.log("Doc clicked");
-  confirm("Do you want to download this files?");
+  confirm("Do you really want to download this files?");
 });
 
 window.addEventListener("keydown", function(event) {

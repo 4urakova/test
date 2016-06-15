@@ -362,7 +362,7 @@
             <li class="checklist__item">
               <input type="checkbox" id="checklist-item-5">
               <label for="checklist-item-1" class="checklist__text">Recent view should sort by Created and show no Done items</label>
-            </li>            
+            </li>
           </ul>
 
           <section class="post__info  clearfix">
@@ -386,7 +386,7 @@
           <ul class="list">
             <li class="list__item  list__item--important  clearfix">
               <div class="list__item-title">Children</div>
-              <div class="list__item-info">
+              <div class="list__item-info  clearfix">
                 <div class="list__item-time">7h ago</div>
                 <div class="list__item-qty">12 items</div>
               </div>
@@ -470,9 +470,9 @@
         </article>
 
         <article class="post">
-          <p class="post__text">
-            The Dark Knight Rises is a 2012 British-American superhero film directed be Christopher Nolan,  who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film triology, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
-          </p>
+          <div class="post__text">
+            The Dark Knight Rises is a 2012 British-American superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan Nolan, and the story with David S. Goyer. Featuring the DC Comics character Batman, the film is the final installment in Nolan's Batman film triology, and the sequel to Batman Begins (2005) and The Dark Knight (2008). Christian Bale reprises the lead role of Bruce Wayne/Batman, with a returning cast of allies: Michael Caine as Alfred Pennyworth, Gary Oldman as James Gordon, and Morgan Freeman as Lucius Fox. The film introduces Selina Kyle (Anne Hathaway), a sly, morally ambiguous cat burglar, and Bane (Tom Hardy), a revolutionary bent on destroying Gotham City who forces an older Bruce Wayne to come out of retirement and become Batman again.
+          </div>
 
           <section class="gallery  clearfix">
             <div class="gallery__item">
@@ -520,19 +520,19 @@
 
           <section class="docs  clearfix">
             <div class="docs__item">
-              <a class="docs__file" href="" download>
+              <a class="docs__file" href="#" download>
                 <img src="img/doc-1.svg" width="46" height="58" alt="doc-1">
                 <span>logo_final.eps</span>
               </a>
             </div>
             <div class="docs__item">
-              <a class="docs__file" href="" download>
+              <a class="docs__file" href="#" download>
                 <img src="img/doc-2.svg" width="46" height="58" alt="doc-2">
                 <span>photos_summer.zip</span>
               </a>
             </div>
             <div class="docs__item">
-              <a class="docs__file" href="" download>
+              <a class="docs__file" href="#" download>
                 <img src="img/doc-3.svg" width="46" height="58" alt="doc-3">
                 <span>work_...hard.doc</span>
               </a>
@@ -642,24 +642,9 @@
         </section>
       </div>
     </footer>
-    <script src="_assets/jquery.js"></script>
-    <script src="_assets/jquery.pixlayout.js"></script>
-    <script>
-      if(true) {
-        $(function(){
-          $.pixlayout({
-              src: "_assets/public_page_1200.png",
-              opacity: 0.4,
-              top: -2,
-              center: true,
-              clip: true,
-              show: true,
-          })
-        });
-      }
-    </script>
+
     <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script>
+<!--    <script>
       function initialize() {
         var mapProp = {
           center:new google.maps.LatLng(40.711158,-74.003516),
@@ -669,7 +654,7 @@
         var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    </script>-->
     <script src="js/scripts.js"></script>
   </body>
 </html>
