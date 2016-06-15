@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var cssnext = require("postcss-cssnext");
+var cssnext = require("cssnext");
 var csslint = require("gulp-csslint");
 var imagemin = require("gulp-imagemin");
 var jslint = require("gulp-jslint");
@@ -9,6 +9,7 @@ var del = require("del");
 var uglifyjs = require("gulp-uglify");
 var cssnano = require("gulp-cssnano");
 var rename = require("gulp-rename");
+var mqpacker = require("css-mqpacker");
 
 gulp.task("css", function () {
   var processors = [
@@ -18,7 +19,10 @@ gulp.task("css", function () {
       "custonSelectors": true,
     }),
     autoprefixer({
-      browsers:["Last 3 versions"]})
+      browsers:["Last 3 versions"]}),
+    mqpacker({
+      sort: true
+    })
   ];
   return gulp.src("postcss/style.css")
     .pipe(postcss(processors))
@@ -72,7 +76,7 @@ gulp.task("compresscss", function() {
     .pipe(gulp.dest("build/css"))
 });
 
-gulp.task("build", ["clean", "css", "img"]), function() {
+gulp.task("build", ["clean", "css", "compressjs", "compresscss", "img"]), function() {
   var buildCss = gulp.src(["css/style.css", "css/style.min.css"])
     .pipe(gulp.dest("build/css"));
 

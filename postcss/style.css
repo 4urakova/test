@@ -712,35 +712,6 @@ h5 {
   position: relative;
 }
 
-.post__note {
-  width: 100%;
-  height: 18px;
-  margin-top: 15px;
-  margin-bottom: 7px;
-  padding-left: 28px;
-  box-sizing: border-box;
-  position: relative;
-  color: #858585;
-  line-height: 2;
-}
-
-.post__note::before {
-  content: url(../img/icon-calendar.svg);
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.post__text {
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 13px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #494949;
-}
-
 .post--priority {
   position: relative;
 }
@@ -797,20 +768,6 @@ h5 {
     padding-top: 12px;
  }
 
-  .post__text {
-    text-align: left;
-    margin-bottom: 19px;
-    font-size: 17px;
-    line-height: 1.6;
-    color: #494949;
-  }
-
-  .post__note {
-    margin-top: 13px;
-    margin-bottom: 13px;
-    padding-left: 33px;
-  }
-
   .post--priority::after {
     content: url(../img/star-tablet.svg);
   }
@@ -821,18 +778,6 @@ h5 {
     width: var(--desktop-container);
     padding: 30px;
     padding-bottom: 25px;
-  }
-
-  .post__text {
-    margin-bottom: 19px;
-    font-size: 16px;
-    line-height: 26px;
-    color: #494949;
-  }
-
-  .post__note {
-    margin-top: 13px;
-    margin-bottom: 17px;
   }
 
   .post--protected,
@@ -862,6 +807,70 @@ h5 {
 
   .post--priority::after {
     content: url(../img/star-desktop.svg);
+  }
+}
+
+/* -- calendar block -- */
+
+.calendar {
+  width: 100%;
+  height: 18px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  padding-left: 28px;
+  box-sizing: border-box;
+  position: relative;
+  color: #858585;
+  line-height: 2;
+}
+
+.calendar::before {
+  content: url(../img/icon-calendar.svg);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (--tablet) {
+  .calendar {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding-left: 33px;
+  }
+}
+
+@media (--desktop) {
+  .calendar {
+    margin-top: 13px;
+    margin-bottom: 17px;
+  }
+}
+
+/* -- text block -- */
+
+.text {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #494949;
+}
+
+@media (--tablet) {
+  .text {
+    margin-bottom: 19px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+}
+
+@media (--desktop) {
+  .text {
+    margin-bottom: 19px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
